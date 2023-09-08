@@ -1,0 +1,74 @@
+body{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(231, 231, 231);
+  font-family: 'Poppins';
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+@font-face{
+  font-family: 'PoppinsBold';
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+section{
+  width: 50%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 30px 30px 230px 30px;
+}
+.dias{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.dias h3{
+  font-size:14px;
+  color: rgb(121, 121, 121);
+}
+.line{
+  position: absolute;
+  top: 19.2%;
+  width: 45%;
+  height: 0.5px;
+  background-color: rgb(185, 185, 185);
+}
+input{
+  width: 100px;
+  font-size: 30px;
+  border: 0.1px solid rgb(121, 121, 121);
+  color: rgb(121, 121, 121);
+  padding: 5px 14px;
+}
+.img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  margin-left: 90%;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #a25bdb;
+}
+img{
+  width: 50px;
+  height: 50px;
+}
+.dias_g{
+  color: rgb(121, 121, 121);
+  font-size: 50px;
+  padding: 0;
+}
+.dias_g div{
+  font-size: 90px;
+  font-family: 'PoppinsBold';
+  letter-spacing: 8px;
+  color: #000;
+}
+div span{
+  color: #a25bdb;
+}
