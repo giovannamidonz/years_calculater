@@ -1,12 +1,15 @@
+//Data//
 const dataAtual = new Date();
 const dia = dataAtual.getDate();
 const mes = dataAtual.getMonth() + 1;
 const ano = dataAtual.getFullYear();
 
+//Variaveis e associacoes//
 const numdiaInput = document.getElementById('numdia');
 const nummesInput = document.getElementById('nummes');
 const anoInput = document.getElementById('ano');
 
+//Limitacão de digito do input e correcao de data errada//
   numdiaInput.addEventListener('input', function() {
     let numdia = numdiaInput.value.replace(/\D/g, '');
     numdia = numdia.substring(0, 2);
@@ -24,28 +27,32 @@ const anoInput = document.getElementById('ano');
     }
   });
   anoInput.addEventListener('input', function() {
-  let ano = anoInput.value.replace(/\D/g, '');
-  ano = ano.substring(0, 4);
-    if (ano > 2023) {
-    ano = '2023';
+    let ano = anoInput.value.replace(/\D/g, '');
+    ano = ano.substring(0, 4);
+    if (ano.length === 4){
+      anoInput.value = ano;
+      if (ano > 2023){
+        anoInput.value = '2023'
+      }
     }
-  anoInput.value = ano;
-});
+  });
 
-numdiaInput.addEventListener('blur', function() {
-  let numdia = parseInt(numdiaInput.value);
-  if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
-    numdiaInput.value = '31';
-  }
-});
+  //Logica de valores naturais em relacão ao pedido//
+  numdiaInput.addEventListener('blur', function() {
+    let numdia = parseInt(numdiaInput.value);
+    if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
+      numdiaInput.value = '31';
+    }
+  });
+  
+  nummesInput.addEventListener('blur', function() {
+    let nummes = parseInt(nummesInput.value);
+    if (nummes < 1 || nummes > 12 || isNaN(nummes)) {
+      nummesInput.value = '12';
+    }
+  });
 
-nummesInput.addEventListener('blur', function() {
-  let nummes = parseInt(nummesInput.value);
-  if (nummes < 1 || nummes > 12 || isNaN(nummes)) {
-    nummesInput.value = '12';
-  }
-});
-
+  //Logica matematica entre as datas//
 function subtracao(){
   var numano = document.getElementById("ano");
   var anoResult = document.getElementById("anor");
@@ -74,6 +81,8 @@ function subtracao(){
     diaResult.textContent = result_dia;
     }
   }
+
+  //Start//
 document.getElementById("img").addEventListener("click", subtracao);
 const anoEnter = document.getElementById('ano');
 anoEnter.addEventListener('keydown', function(event) {
