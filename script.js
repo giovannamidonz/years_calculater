@@ -23,6 +23,14 @@ const anoInput = document.getElementById('ano');
       anoInput.focus();
     }
   });
+  anosInput.addEventListener('input', function() {
+    let ano = anosInput.value.replace(/\D/g, '');
+    nummes = nummes.substring(0, 4);
+    anosInput.value = anoo;
+    if (nummes.length === 4) {
+      anoInput.focus();
+    }
+  });
 
 function subtracao(){
   var numano = document.getElementById("ano");
