@@ -35,14 +35,14 @@ const anoInput = document.getElementById('ano');
 numdiaInput.addEventListener('blur', function() {
   let numdia = parseInt(numdiaInput.value);
   if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
-    numdiaInput.value = '';
+    numdiaInput.value = '31';
   }
 });
 
 nummesInput.addEventListener('blur', function() {
   let nummes = parseInt(nummesInput.value);
   if (nummes < 1 || nummes > 12 || isNaN(nummes)) {
-    nummesInput.value = '';
+    nummesInput.value = '12';
   }
 });
 
