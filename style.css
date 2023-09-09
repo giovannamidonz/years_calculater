@@ -228,10 +228,10 @@ div span{
     height: 15px;
   }
   .dias_g div{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 60px;
     font-family: 'PoppinsBold';
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     color: #000;
   }
 }
