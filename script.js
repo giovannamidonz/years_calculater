@@ -29,11 +29,9 @@ const anoInput = document.getElementById('ano');
   anoInput.addEventListener('input', function() {
     let ano = anoInput.value.replace(/\D/g, '');
     ano = ano.substring(0, 4);
-    if (ano.length === 4){
-      anoInput.value = ano;
-      if (ano > 2023){
+    anoInput.value = ano;
+    if (ano.length === 4 && ano > 2023){
         anoInput.value = '2023'
-      }
     }
   });
 
