@@ -27,7 +27,7 @@ const anoInput = document.getElementById('ano');
     }
   });
   anoInput.addEventListener('input', function() {
-    let ano = anoInput.value.replace(/\D/g, '');
+    let ano = anoInput.value.replace(/\D/u, '');
     ano = ano.substring(0, 4);
     anoInput.value = ano;
     if (ano.length === 4 && ano > 2023){
