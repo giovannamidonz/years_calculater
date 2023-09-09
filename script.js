@@ -26,7 +26,24 @@ const anoInput = document.getElementById('ano');
   anoInput.addEventListener('input', function() {
   let ano = anoInput.value.replace(/\D/g, '');
   ano = ano.substring(0, 4);
+    if (ano > 2023) {
+    ano = '2023';
+    }
   anoInput.value = ano;
+});
+
+numdiaInput.addEventListener('blur', function() {
+  let numdia = parseInt(numdiaInput.value);
+  if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
+    numdiaInput.value = '';
+  }
+});
+
+nummesInput.addEventListener('blur', function() {
+  let nummes = parseInt(nummesInput.value);
+  if (nummes < 1 || nummes > 12 || isNaN(nummes)) {
+    nummesInput.value = '';
+  }
 });
 
 function subtracao(){
