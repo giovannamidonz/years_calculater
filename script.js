@@ -23,11 +23,11 @@ const anoInput = document.getElementById('ano');
       anoInput.focus();
     }
   });
-  anosInput.addEventListener('input', function() {
-    let ano = anosInput.value.replace(/\D/g, '');
-    nummes = nummes.substring(0, 4);
-    anosInput.value = anoo;
-    if (nummes.length === 4) {
+  anoInput.addEventListener('input', function() {
+    let ano = anoInput.value.replace(/\D/g, '');
+    ano = ano.substring(0, 4);
+    anoInput.value = ano;
+    if (ano.length === 4) {
       anoInput.focus();
     }
   });
