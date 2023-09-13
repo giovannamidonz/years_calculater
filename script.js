@@ -38,14 +38,14 @@ const anoInput = document.getElementById('ano');
   //Logica de valores naturais em relacão ao pedido//
   numdiaInput.addEventListener('blur', function() {
     let numdia = parseInt(numdiaInput.value);
-    if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
+    if (numdia < 1 || numdia > dia || isNaN(numdia)) {
       numdiaInput.value = '31';
     }
   });
   
   nummesInput.addEventListener('blur', function() {
     let nummes = parseInt(nummesInput.value);
-    if (nummes < 1 || nummes > 12 || isNaN(nummes)) {
+    if (nummes < 1 || nummes > mes || isNaN(nummes)) {
       nummesInput.value = '12';
     }
   });
