@@ -38,7 +38,7 @@ const anoInput = document.getElementById('ano');
   //Logica de valores naturais em relacão ao pedido//
   numdiaInput.addEventListener('blur', function() {
     let numdia = parseInt(numdiaInput.value);
-    if (numdia < 1 || numdia > dia || isNaN(numdia)) {
+    if (numdia < 1 || numdia > 31 || isNaN(numdia)) {
       numdiaInput.value = '31';
     }
   });
