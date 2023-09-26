@@ -1,4 +1,4 @@
-#Calculador de Anos#
+# Calculadora  de Aniverários
 
 Projeto para fazer contagem de quantos anos, meses e dias voce tem desde o dia do seu nascimento.
 
